@@ -76,7 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2EBB11331B9E3F5E005D313C /* MakeSchoolNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeSchoolNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EBB11331B9E3F5E005D313C /* MyNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBB11361B9E3F5E005D313C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EBB113B1B9E3F5E005D313C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2EBB113D1B9E3F5E005D313C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				2EED6B4E1B9E520500CD5441 /* Frameworks */,
-				2EBB11351B9E3F5E005D313C /* MakeSchoolNotes */,
+				2EBB11351B9E3F5E005D313C /* MyNotes */,
 				2EBB11341B9E3F5E005D313C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -124,12 +124,12 @@
 		2EBB11341B9E3F5E005D313C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2EBB11331B9E3F5E005D313C /* MakeSchoolNotes.app */,
+				2EBB11331B9E3F5E005D313C /* MyNotes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2EBB11351B9E3F5E005D313C /* MakeSchoolNotes */ = {
+		2EBB11351B9E3F5E005D313C /* MyNotes */ = {
 			isa = PBXGroup;
 			children = (
 				2EED6B581B9E534800CD5441 /* Constants */,
@@ -142,6 +142,7 @@
 				2EBB113F1B9E3F5E005D313C /* LaunchScreen.storyboard */,
 				2EBB11421B9E3F5E005D313C /* Info.plist */,
 			);
+			name = MyNotes;
 			path = MakeSchoolNotes;
 			sourceTree = "<group>";
 		};
@@ -200,9 +201,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2EBB11321B9E3F5E005D313C /* MakeSchoolNotes */ = {
+		2EBB11321B9E3F5E005D313C /* MyNotes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2EBB11451B9E3F5E005D313C /* Build configuration list for PBXNativeTarget "MakeSchoolNotes" */;
+			buildConfigurationList = 2EBB11451B9E3F5E005D313C /* Build configuration list for PBXNativeTarget "MyNotes" */;
 			buildPhases = (
 				2EBB112F1B9E3F5E005D313C /* Sources */,
 				2EBB11301B9E3F5E005D313C /* Frameworks */,
@@ -214,9 +215,9 @@
 			dependencies = (
 				62466AAE1BDFF22500F84A78 /* PBXTargetDependency */,
 			);
-			name = MakeSchoolNotes;
+			name = MyNotes;
 			productName = MakeSchoolNotes;
-			productReference = 2EBB11331B9E3F5E005D313C /* MakeSchoolNotes.app */;
+			productReference = 2EBB11331B9E3F5E005D313C /* MyNotes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -233,7 +234,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2EBB112E1B9E3F5E005D313C /* Build configuration list for PBXProject "MakeSchoolNotes" */;
+			buildConfigurationList = 2EBB112E1B9E3F5E005D313C /* Build configuration list for PBXProject "MyNotes" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -252,7 +253,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				2EBB11321B9E3F5E005D313C /* MakeSchoolNotes */,
+				2EBB11321B9E3F5E005D313C /* MyNotes */,
 			);
 		};
 /* End PBXProject section */
@@ -432,7 +433,7 @@
 				INFOPLIST_FILE = MakeSchoolNotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.orcudy.MakeSchoolNotes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MyNotes;
 			};
 			name = Debug;
 		};
@@ -448,14 +449,14 @@
 				INFOPLIST_FILE = MakeSchoolNotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.orcudy.MakeSchoolNotes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MyNotes;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2EBB112E1B9E3F5E005D313C /* Build configuration list for PBXProject "MakeSchoolNotes" */ = {
+		2EBB112E1B9E3F5E005D313C /* Build configuration list for PBXProject "MyNotes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2EBB11431B9E3F5E005D313C /* Debug */,
@@ -464,7 +465,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2EBB11451B9E3F5E005D313C /* Build configuration list for PBXNativeTarget "MakeSchoolNotes" */ = {
+		2EBB11451B9E3F5E005D313C /* Build configuration list for PBXNativeTarget "MyNotes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2EBB11461B9E3F5E005D313C /* Debug */,
