@@ -41,23 +41,33 @@ class NotesViewController: UITableViewController {
     super.viewDidLoad()
     tableView.dataSource = self
     
-    let myNote = Note()
-    myNote.title = "Super Simple Test Note"
-    myNote.content = "A long piece of content"
-    
     do {
         let realm = try Realm()
-        try realm.write() {
-            realm.add(myNote)
-        }
-        //1
-        notes = realm.objects(Note)
-      } catch {
+        notes = realm.objects(Note).sorted("modificationDate", ascending: false)
+        } catch {
         print("handle error")
     }
    
   }
-  
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if let identifier = segue.identifier {
+            if identifier == "displayNote" {
+                print("Transitioning to the New Note View Controller")
+            } else if identifier == "addNote"{
+                print("+ button tapped")
+            }
+        }
+    }
+    
+    @IBAction override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        
+    }
+    
+    
+   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.

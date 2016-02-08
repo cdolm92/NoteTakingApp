@@ -9,6 +9,10 @@
 import UIKit
 
 class NewNoteViewController: UIViewController {
+    
+
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +25,16 @@ class NewNoteViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let identifier = segue.identifier {
+            if identifier == "Cancel" {
+                print("Cancel button tapped")
+            } else if identifier == "Save" {
+                print("Save button tapped")
+            }
+        }
+        
     }
-    */
+    
 
 }
