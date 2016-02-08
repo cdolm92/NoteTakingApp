@@ -11,10 +11,16 @@ import UIKit
 
 class NotesViewController: UITableViewController {
     
+  
+    
+
+
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NoteCell", forIndexPath: indexPath) as! NoteTableViewCell //1
         
-        cell.textLabel?.text = "Hello World"
+        cell.titleLbl.text = "Hello"
+        cell.dateLbl.text = "Today"
         
         return cell
     }

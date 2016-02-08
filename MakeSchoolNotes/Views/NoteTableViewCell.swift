@@ -10,5 +10,8 @@
 import UIKit
 
 class NoteTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var dateLbl: UILabel!
   
 }
