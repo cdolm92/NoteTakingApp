@@ -10,11 +10,23 @@
 import UIKit
 
 class NotesViewController: UITableViewController {
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("NoteCell", forIndexPath: indexPath) as! NoteTableViewCell //1
+        
+        cell.textLabel?.text = "Hello World"
+        
+        return cell
+    }
+
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    // Do any additional setup after loading the view, typically from a nib.
+    tableView.dataSource = self
+   
   }
   
   override func didReceiveMemoryWarning() {
