@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Dashboard-->
         <scene sceneID="CkP-n1-SP5">
             <objects>
                 <tableViewController id="Cx5-Qp-QQz" customClass="NotesViewController" customModule="MyNotes" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,11 +45,35 @@
                             <outlet property="delegate" destination="Cx5-Qp-QQz" id="ShE-9Q-Sqs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Home" id="Fzv-hA-yQa"/>
+                    <navigationItem key="navigationItem" title="Dashboard" id="Fzv-hA-yQa">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="FQQ-ZG-zJs">
+                            <connections>
+                                <segue destination="cqx-lg-zBG" kind="show" identifier="Add" id="ZD5-EZ-8DG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lzf-Re-kSG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1159" y="-183"/>
+        </scene>
+        <!--New Note View Controller-->
+        <scene sceneID="DFw-B5-rQ0">
+            <objects>
+                <viewController id="cqx-lg-zBG" customClass="NewNoteViewController" customModule="MyNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yPQ-tx-gle"/>
+                        <viewControllerLayoutGuide type="bottom" id="F7t-DF-Ya2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N5o-S6-k8r">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xk9-AD-G6t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824" y="-183"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="avV-VO-hBd">
