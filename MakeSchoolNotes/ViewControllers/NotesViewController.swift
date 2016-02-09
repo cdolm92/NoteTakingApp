@@ -12,7 +12,11 @@ import RealmSwift
 
 class NotesViewController: UITableViewController {
     
-    var notes = [Note]()
+    var notes: Results<Note>! {
+        didSet {
+            tableView.reloadData()
+        }
+    }
   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NoteCell", forIndexPath: indexPath) as! NoteTableViewCell //1
@@ -36,14 +40,13 @@ class NotesViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
-        notes.removeAtIndex(indexPath.row)
-        tableView.reloadData()
-        
+        RealmHelper.deleteNote(notes[indexPath.row])
+        notes = RealmHelper.retrieveNotes()
     }
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
+        notes = RealmHelper.retrieveNotes()
     
     }
     

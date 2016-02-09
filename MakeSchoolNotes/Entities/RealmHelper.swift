@@ -39,6 +39,4 @@ class RealmHelper {
         return realm.objects(Note).sorted("modificationTime", ascending: false)
     }
     
-    
-    
 }

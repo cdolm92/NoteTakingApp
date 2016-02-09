@@ -48,17 +48,19 @@ class NewNoteViewController: UIViewController {
         if segue.identifier == "Save" {
             
             if let note = note {
-                note.title = noteTitleTextField.text ?? ""
-                note.content = noteContentTextView.text ?? ""
+                let newNote = Note()
+                newNote.title = noteTitleTextField.text ?? ""
+                newNote.content = noteContentTextView.text ?? ""
+                RealmHelper.updateNote(note, newNote: newNote)
             } else {
                 let note = Note()
                 note.title = noteTitleTextField.text ?? ""
                 note.content = noteContentTextView.text ?? ""
                 note.modificationTime = NSDate()
-                destinationViewController.notes.append(note)
+                RealmHelper.addNote(note)
             }
             
-            destinationViewController.tableView.reloadData()
+            destinationViewController.notes = RealmHelper.retrieveNotes()
         }
         
     }
