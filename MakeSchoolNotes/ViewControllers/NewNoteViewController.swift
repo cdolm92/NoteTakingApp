@@ -19,14 +19,21 @@ class NewNoteViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        noteTitleTextField.text = ""
-        noteContentTextView.text = ""
+        if let note = note {
+            noteTitleTextField.text = note.title
+            noteContentTextView.text = note.content
+        } else {
+            noteTitleTextField.text = ""
+            noteContentTextView.text = ""
+        }
+        
     }
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = note?.title
+        
 
         // Do any additional setup after loading the view.
     }
@@ -37,22 +44,21 @@ class NewNoteViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let identifier = segue.identifier {
-            if identifier == "Cancel" {
-                print("Cancel button tapped")
-            } else if identifier == "Save" {
-                print("Save button tapped")
-                
+        let destinationViewController = segue.destinationViewController as! NotesViewController
+        if segue.identifier == "Save" {
+            
+            if let note = note {
+                note.title = noteTitleTextField.text ?? ""
+                note.content = noteContentTextView.text ?? ""
+            } else {
                 let note = Note()
                 note.title = noteTitleTextField.text ?? ""
                 note.content = noteContentTextView.text ?? ""
                 note.modificationTime = NSDate()
-                
-                let destinationViewController = segue.destinationViewController as! NotesViewController
                 destinationViewController.notes.append(note)
-                destinationViewController.tableView.reloadData()
-                
             }
+            
+            destinationViewController.tableView.reloadData()
         }
         
     }

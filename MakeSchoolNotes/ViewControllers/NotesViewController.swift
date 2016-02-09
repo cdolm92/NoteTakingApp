@@ -14,8 +14,6 @@ class NotesViewController: UITableViewController {
     
     var notes = [Note]()
   
-
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NoteCell", forIndexPath: indexPath) as! NoteTableViewCell //1
         
@@ -29,7 +27,6 @@ class NotesViewController: UITableViewController {
         
         cell.dateLbl.text = dateFormatter.stringFromDate(currentDate)
         
-        
         return cell
     }
 
@@ -37,20 +34,21 @@ class NotesViewController: UITableViewController {
         return notes.count
     }
  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    tableView.dataSource = self
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.dataSource = self
     
-  
-   
-  }
-    
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if let identifier = segue.identifier {
             if identifier == "displayNote" {
-                print("Transitioning to the New Note View Controller")
+                print("Table view cell tapped")
+                let indexPath = tableView.indexPathForSelectedRow!
+                let note = notes[indexPath.row]
+                let destination = segue.destinationViewController as! NewNoteViewController
+                destination.note = note
             } else if identifier == "addNote"{
                 print("+ button tapped")
             }
@@ -61,11 +59,9 @@ class NotesViewController: UITableViewController {
         
     }
     
-    
-   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
   
 }
