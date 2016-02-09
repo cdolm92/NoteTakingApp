@@ -10,7 +10,18 @@ import UIKit
 
 class NewNoteViewController: UIViewController {
     
+    var note: Note?
+    
+    @IBOutlet weak var noteTitleTextField: UITextField!
 
+    @IBOutlet weak var noteContentTextView: UITextView!
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        noteTitleTextField.text = ""
+        noteContentTextView.text = ""
+    }
     
     
 
@@ -31,6 +42,16 @@ class NewNoteViewController: UIViewController {
                 print("Cancel button tapped")
             } else if identifier == "Save" {
                 print("Save button tapped")
+                
+                let note = Note()
+                note.title = noteTitleTextField.text ?? ""
+                note.content = noteContentTextView.text ?? ""
+                note.modificationTime = NSDate()
+                
+                let destinationViewController = segue.destinationViewController as! NotesViewController
+                destinationViewController.notes.append(note)
+                destinationViewController.tableView.reloadData()
+                
             }
         }
         

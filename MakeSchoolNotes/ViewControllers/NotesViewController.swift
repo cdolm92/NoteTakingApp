@@ -12,41 +12,36 @@ import RealmSwift
 
 class NotesViewController: UITableViewController {
     
-    var notes: Results<Note>! {
-        didSet {
-            //Whenever notes update, update the table view
-            
-            tableView?.reloadData()
-        }
-    }
-    
-
+    var notes = [Note]()
+  
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NoteCell", forIndexPath: indexPath) as! NoteTableViewCell //1
         
         let row = indexPath.row
-        let note = notes[row] as Note
-        cell.note = note
+        let note = notes[row]
+        cell.titleLbl.text = note.title
+        
+        let currentDate = note.modificationTime
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        
+        cell.dateLbl.text = dateFormatter.stringFromDate(currentDate)
+        
         
         return cell
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notes?.count ?? 0
+        return notes.count
     }
  
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.dataSource = self
     
-    do {
-        let realm = try Realm()
-        notes = realm.objects(Note).sorted("modificationDate", ascending: false)
-        } catch {
-        print("handle error")
-    }
+  
    
   }
     
