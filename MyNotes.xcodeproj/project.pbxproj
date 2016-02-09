@@ -20,14 +20,14 @@
 		62096A131BABC24600564CFC /* ConvenienceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62096A0E1BABC23900564CFC /* ConvenienceKit.framework */; };
 		62466AAB1BDFF22500F84A78 /* ConvenienceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62096A0E1BABC23900564CFC /* ConvenienceKit.framework */; };
 		62466AAC1BDFF22500F84A78 /* ConvenienceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62096A0E1BABC23900564CFC /* ConvenienceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		62466AB11BDFF66C00F84A78 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62466AAF1BDFF66C00F84A78 /* Realm.framework */; };
 		62466AB21BDFF66C00F84A78 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62466AB01BDFF66C00F84A78 /* RealmSwift.framework */; };
 		62466AB51BE0008300F84A78 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62466AAF1BDFF66C00F84A78 /* Realm.framework */; };
-		62466AB61BE0008300F84A78 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62466AAF1BDFF66C00F84A78 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		62466AB71BE0008300F84A78 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62466AB01BDFF66C00F84A78 /* RealmSwift.framework */; };
-		62466AB81BE0008300F84A78 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62466AB01BDFF66C00F84A78 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F72EF15A1C686BD900EBCE59 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72EF1591C686BD900EBCE59 /* NewNoteViewController.swift */; };
 		F72EF15F1C697E9600EBCE59 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72EF15E1C697E9600EBCE59 /* RealmHelper.swift */; };
+		F72EF1641C6985BD00EBCE59 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72EF1621C6985BD00EBCE59 /* Realm.framework */; };
+		F72EF1651C6985BD00EBCE59 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F72EF1621C6985BD00EBCE59 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F72EF1661C6985BD00EBCE59 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F72EF1631C6985BD00EBCE59 /* RealmSwift.framework */; };
+		F72EF1671C6985BD00EBCE59 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F72EF1631C6985BD00EBCE59 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,9 +68,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				62466AB61BE0008300F84A78 /* Realm.framework in Embed Frameworks */,
+				F72EF1651C6985BD00EBCE59 /* Realm.framework in Embed Frameworks */,
+				F72EF1671C6985BD00EBCE59 /* RealmSwift.framework in Embed Frameworks */,
 				62466AAC1BDFF22500F84A78 /* ConvenienceKit.framework in Embed Frameworks */,
-				62466AB81BE0008300F84A78 /* RealmSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,10 +91,12 @@
 		2EED6B601B9E53AC00CD5441 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		2EED6B621B9E53BC00CD5441 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		62096A071BABC23900564CFC /* ConvenienceKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ConvenienceKit.xcodeproj; path = ConvenienceKit/ConvenienceKit.xcodeproj; sourceTree = "<group>"; };
-		62466AAF1BDFF66C00F84A78 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		62466AB01BDFF66C00F84A78 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		62466AAF1BDFF66C00F84A78 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "/Users/christella/Projects/Swift/Make-School-Notes-Starter-Project-starter_project/Frameworks/Realm.framework"; sourceTree = "<absolute>"; };
+		62466AB01BDFF66C00F84A78 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "/Users/christella/Projects/Swift/Make-School-Notes-Starter-Project-starter_project/Frameworks/RealmSwift.framework"; sourceTree = "<absolute>"; };
 		F72EF1591C686BD900EBCE59 /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
-		F72EF15E1C697E9600EBCE59 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		F72EF15E1C697E9600EBCE59 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmHelper.swift; path = Entities/RealmHelper.swift; sourceTree = "<group>"; };
+		F72EF1621C6985BD00EBCE59 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = ../Realm.framework; sourceTree = "<group>"; };
+		F72EF1631C6985BD00EBCE59 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = ../RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,14 +104,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F72EF1641C6985BD00EBCE59 /* Realm.framework in Frameworks */,
 				62096A131BABC24600564CFC /* ConvenienceKit.framework in Frameworks */,
 				2EED6B531B9E520E00CD5441 /* Realm.framework in Frameworks */,
 				62466AB21BDFF66C00F84A78 /* RealmSwift.framework in Frameworks */,
 				2EED6B521B9E520500CD5441 /* RealmSwift.framework in Frameworks */,
 				62466AB51BE0008300F84A78 /* Realm.framework in Frameworks */,
+				F72EF1661C6985BD00EBCE59 /* RealmSwift.framework in Frameworks */,
 				62466AAB1BDFF22500F84A78 /* ConvenienceKit.framework in Frameworks */,
-				62466AB71BE0008300F84A78 /* RealmSwift.framework in Frameworks */,
-				62466AB11BDFF66C00F84A78 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +138,7 @@
 		2EBB11351B9E3F5E005D313C /* MyNotes */ = {
 			isa = PBXGroup;
 			children = (
+				F72EF15E1C697E9600EBCE59 /* RealmHelper.swift */,
 				2EED6B581B9E534800CD5441 /* Constants */,
 				2EED6B591B9E534800CD5441 /* Entities */,
 				2EED6B5A1B9E534800CD5441 /* ViewControllers */,
@@ -153,8 +156,8 @@
 		2EED6B4E1B9E520500CD5441 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				62466AAF1BDFF66C00F84A78 /* Realm.framework */,
-				62466AB01BDFF66C00F84A78 /* RealmSwift.framework */,
+				F72EF1621C6985BD00EBCE59 /* Realm.framework */,
+				F72EF1631C6985BD00EBCE59 /* RealmSwift.framework */,
 				62096A071BABC23900564CFC /* ConvenienceKit.xcodeproj */,
 			);
 			path = Frameworks;
@@ -172,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				2EED6B5E1B9E539B00CD5441 /* Note.swift */,
-				F72EF15E1C697E9600EBCE59 /* RealmHelper.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -437,6 +439,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Frameworks",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MakeSchoolNotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -453,6 +456,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Frameworks",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MakeSchoolNotes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
