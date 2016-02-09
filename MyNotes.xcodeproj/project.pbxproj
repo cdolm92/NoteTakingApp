@@ -27,6 +27,7 @@
 		62466AB71BE0008300F84A78 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62466AB01BDFF66C00F84A78 /* RealmSwift.framework */; };
 		62466AB81BE0008300F84A78 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62466AB01BDFF66C00F84A78 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F72EF15A1C686BD900EBCE59 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72EF1591C686BD900EBCE59 /* NewNoteViewController.swift */; };
+		F72EF15F1C697E9600EBCE59 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72EF15E1C697E9600EBCE59 /* RealmHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		62466AAF1BDFF66C00F84A78 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		62466AB01BDFF66C00F84A78 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		F72EF1591C686BD900EBCE59 /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNoteViewController.swift; sourceTree = "<group>"; };
+		F72EF15E1C697E9600EBCE59 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				2EED6B5E1B9E539B00CD5441 /* Note.swift */,
+				F72EF15E1C697E9600EBCE59 /* RealmHelper.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				2EBB11371B9E3F5E005D313C /* AppDelegate.swift in Sources */,
 				2EED6B5D1B9E535A00CD5441 /* StyleConstants.swift in Sources */,
 				2EED6B631B9E53BC00CD5441 /* NoteTableViewCell.swift in Sources */,
+				F72EF15F1C697E9600EBCE59 /* RealmHelper.swift in Sources */,
 				2EED6B5F1B9E539B00CD5441 /* Note.swift in Sources */,
 				F72EF15A1C686BD900EBCE59 /* NewNoteViewController.swift in Sources */,
 			);
