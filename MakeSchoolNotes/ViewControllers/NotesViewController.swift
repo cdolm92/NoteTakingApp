@@ -33,6 +33,13 @@ class NotesViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notes.count
     }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        notes.removeAtIndex(indexPath.row)
+        tableView.reloadData()
+        
+    }
  
     override func viewDidLoad() {
         super.viewDidLoad()
